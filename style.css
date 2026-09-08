@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #242720; background: #f4f3ed; font-synthesis: none; scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid #4d6741; outline-offset: 7px; }
+.page { max-width: 1600px; margin: auto; padding: 0 6%; }
+header { display: flex; justify-content: space-between; align-items: center; height: 116px; border-bottom: 1px solid #d4d6cb; }
+.wordmark { font-family: 'Manrope', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -3px; }
+.wordmark span { color: #75845a; }
+.header-note, .eyebrow, .section-label, .small-note, .margin-note { font-size: 11px; letter-spacing: .14em; font-weight: 600; }
+.header-note { color: #76796e; }
+.nav-link { font-size: 14px; }
+.nav-link span { margin-left: 20px; }
+.hero { position: relative; padding: 68px 0 58px; overflow: hidden; isolation: isolate; }
+.eyebrow { display: flex; gap: 10px; align-items: center; }
+.dot { width: 7px; height: 7px; background: #657f4c; border-radius: 50%; }
+h1 { font-family: 'Manrope', sans-serif; font-weight: 500; font-size: clamp(90px, 12vw, 182px); line-height: .96; letter-spacing: -.075em; margin: 46px 0 38px -9px; }
+h1 span { color: #657451; }
+.hero-bottom { display: flex; justify-content: space-between; align-items: end; width: 47%; }
+.hero-bottom p { font-size: 20px; line-height: 1.5; margin: 0; color: #65685e; }
+.round-link { width: 49px; height: 49px; border: 1px solid #bfc4b4; border-radius: 50%; display: grid; place-items: center; font-size: 23px; transition: background .2s, transform .2s; }
+.round-link:hover { background: #e5e8dc; transform: translateY(3px); }
+.orb { position: absolute; z-index: -1; width: 40%; aspect-ratio: 1; right: 1%; top: 20%; border-radius: 50%; border: 1px solid #cbd0bd; padding: 16px; }
+.orb::before { content: ''; position: absolute; inset: -21px; border-radius: 50%; border: 1px solid #e1e3d7; }
+.orb-core { height: 100%; border-radius: 50%; background: radial-gradient(circle at 32% 27%, #e1e4c5 0, #bac398 26%, #89976b 55%, #57684b 79%, #394e37 100%); box-shadow: inset -12px -16px 35px #31452c33; }
+.margin-note { position: absolute; right: 0; bottom: 57px; color: #76796e; font-size: 9px; }
+.about { border-top: 1px solid #d4d6cb; padding: 58px 0 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; scroll-margin-top: 30px; }
+.section-label { padding-top: 10px; }
+.section-label span { margin-right: 28px; color: #8a8e80; }
+h2 { font-family: 'Manrope', sans-serif; font-weight: 500; font-size: clamp(32px, 3.5vw, 48px); letter-spacing: -.045em; line-height: 1.17; margin: 0 0 24px; }
+.about-content p { max-width: 460px; font-size: 16px; color: #71756a; line-height: 1.8; }
+.small-note { display: inline-block; margin-top: 20px; color: #657451; font-size: 10px; }
+.small-note span { margin-left: 20px; }
+footer { border-top: 1px solid #d4d6cb; min-height: 90px; display: flex; justify-content: space-between; align-items: center; gap: 18px; font-size: 12px; color: #71756a; }
+footer a:hover, .nav-link:hover { color: #344927; }
+.skip-link { position: fixed; top: -80px; left: 20px; padding: 12px 20px; background: #242720; color: white; z-index: 10; }
+.skip-link:focus { top: 15px; }
+@media (min-width: 1500px) { .hero { min-height: 740px; } }
+@media (max-width: 700px) {
+  .page { padding: 0 7%; }
+  header { height: 85px; }
+  .header-note { display: none; }
+  .hero { padding: 46px 0 40px; }
+  h1 { font-size: clamp(80px, 18vw, 125px); margin: 36px 0 30px -5px; }
+  .orb { width: 41%; top: 34%; right: -14%; opacity: .75; }
+  .orb::before { inset: -10px; }
+  .orb { padding: 8px; }
+  .hero-bottom { width: 100%; }
+  .hero-bottom p { font-size: 17px; }
+  .margin-note { display: none; }
+  .about { grid-template-columns: 1fr; gap: 32px; padding: 35px 0 45px; }
+  footer { flex-wrap: wrap; padding: 25px 0; font-size: 11px; }
+  footer > span:nth-child(2) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } .round-link { transition: none; } }
